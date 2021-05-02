@@ -144,8 +144,8 @@ export class OceanPool extends Pool {
           this.web3.utils.toWei(String(oceanAmount))
         )
         if (!txid) {
-          this.logger.error('ERROR: Failed to call approve OCEAN token')
-          throw new Error('ERROR: Failed to call approve OCEAN token')
+          this.logger.error('ERROR: Failed to call approve BDP token')
+          throw new Error('ERROR: Failed to call approve BDP token')
         }
       }
       observer.next(PoolCreateProgressStep.SetupPool)
@@ -546,7 +546,7 @@ export class OceanPool extends Pool {
     maxPrice?: string
   ): Promise<TransactionReceipt> {
     if (this.oceanAddress == null) {
-      this.logger.error('ERROR: undefined ocean token contract address')
+      this.logger.error('ERROR: undefined BDP token contract address')
       return null
     }
     const dtAddress = await this.getDTAddress(poolAddress)
@@ -558,7 +558,7 @@ export class OceanPool extends Pool {
     }
     const calcInGivenOut = await this.getOceanNeeded(poolAddress, dtAmountWanted)
     if (new Decimal(calcInGivenOut).greaterThan(maxOceanAmount)) {
-      this.logger.error('ERROR: Not enough Ocean Tokens')
+      this.logger.error('ERROR: Not enough BDP Tokens')
       return null
     }
     // TODO - check balances first
@@ -569,7 +569,7 @@ export class OceanPool extends Pool {
       this.web3.utils.toWei(maxOceanAmount)
     )
     if (!txid) {
-      this.logger.error('ERROR: OCEAN approve failed')
+      this.logger.error('ERROR: BDP approve failed')
       return null
     }
     const tx = await super.swapExactAmountOut(
@@ -626,7 +626,7 @@ export class OceanPool extends Pool {
       this.web3.utils.toWei(OceanAmount)
     )
     if (!txid) {
-      this.logger.error('ERROR: OCEAN approve failed')
+      this.logger.error('ERROR: BDP approve failed')
       return null
     }
     const tx = await super.swapExactAmountIn(
@@ -806,7 +806,7 @@ export class OceanPool extends Pool {
       this.web3.utils.toWei(amount)
     )
     if (!txid) {
-      this.logger.error('ERROR: OCEAN approve failed')
+      this.logger.error('ERROR: BDP approve failed')
       return null
     }
     const result = await super.joinswapExternAmountIn(
