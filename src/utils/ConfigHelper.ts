@@ -57,10 +57,16 @@ export const configHelperNetworks: ConfigHelperConfig[] = [
     networkId: 4,
     network: 'rinkeby',
     nodeUri: 'https://rinkeby.infura.io/v3',
-    metadataCacheUri: 'https://aquarius.rinkeby.oceanprotocol.com',
-    providerUri: 'https://provider.rinkeby.oceanprotocol.com',
-    subgraphUri: 'https://subgraph.rinkeby.oceanprotocol.com',
+    metadataCacheUri: 'https://aquarius.rinkeby.bigdataprotocolmarket.com:5000',
+    providerUri: 'https://provider.rinkeby.bigdataprotocolmarket.com:8030',
+    subgraphUri: 'https://subgraph.bigdataprotocolmarket.com:8000',
     explorerUri: 'https://rinkeby.etherscan.io',
+    oceanTokenAddress: null,
+    oceanTokenSymbol: 'BDP',
+    factoryAddress: null,
+    poolFactoryAddress: null,
+    fixedRateExchangeAddress: null,
+    metadataContractAddress: null,
     startBlock: 7294090
   },
   {
@@ -68,10 +74,16 @@ export const configHelperNetworks: ConfigHelperConfig[] = [
     networkId: 1,
     network: 'mainnet',
     nodeUri: 'https://mainnet.infura.io/v3',
-    metadataCacheUri: 'https://aquarius.mainnet.oceanprotocol.com',
-    providerUri: 'https://provider.mainnet.oceanprotocol.com',
-    subgraphUri: 'https://subgraph.mainnet.oceanprotocol.com',
+    metadataCacheUri: 'https://aquarius.mainnet.bigdataprotocolmarket.com:5000',
+    providerUri: 'https://provider.mainnet.bigdataprotocolmarket.com:8030',
+    subgraphUri: 'https://subgraph.mainnet.bigdataprotocolmarket.com:8000',
     explorerUri: 'https://etherscan.io',
+    oceanTokenAddress: null,
+    oceanTokenSymbol: 'BDP',
+    factoryAddress: null,
+    poolFactoryAddress: null,
+    fixedRateExchangeAddress: null,
+    metadataContractAddress: null,
     startBlock: 11105459
   },
   {
@@ -82,8 +94,13 @@ export const configHelperNetworks: ConfigHelperConfig[] = [
     metadataCacheUri: 'https://aquarius.polygon.oceanprotocol.com',
     providerUri: 'https://provider.polygon.oceanprotocol.com',
     subgraphUri: 'https://subgraph.polygon.oceanprotocol.com',
-    explorerUri: 'https://polygonscan.com',
-    oceanTokenSymbol: 'mOCEAN',
+    explorerUri: 'https://explorer.matic.network',
+    oceanTokenAddress: null,
+    oceanTokenSymbol: 'mBDP',
+    factoryAddress: null,
+    poolFactoryAddress: null,
+    fixedRateExchangeAddress: null,
+    metadataContractAddress: null,
     startBlock: 11005222
   },
   {
@@ -127,6 +144,22 @@ export const configHelperNetworks: ConfigHelperConfig[] = [
     subgraphUri: 'https://subgraph.bsc.oceanprotocol.com',
     explorerUri: 'https://bscscan.com/'
   }
+  // {
+  //   networkId: 1287,
+  //   network: 'moonbeamalpha',
+  //   nodeUri: 'https://rpc.testnet.moonbeam.network/',
+  //   metadataCacheUri: 'https://aquarius.moonbeamalpha.oceanprotocol.com',
+  //   providerUri: 'https://provider.moonbeamalpha.oceanprotocol.com',
+  //   subgraphUri: 'https://subgraph.moonbeamalpha.oceanprotocol.com',
+  //   explorerUri: 'https://moonbase-blockscout.testnet.moonbeam.network/',
+  //   oceanTokenAddress: null,
+  //   oceanTokenSymbol: 'BDP',
+  //   factoryAddress: null,
+  //   poolFactoryAddress: null,
+  //   fixedRateExchangeAddress: null,
+  //   metadataContractAddress: null,
+  //   startBlock: 90707
+  // }
 ]
 
 export class ConfigHelper {
