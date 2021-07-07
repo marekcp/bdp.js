@@ -22,8 +22,8 @@ const configHelperNetworksBase: ConfigHelperConfig = {
   subgraphUri: null,
   explorerUri: null,
   oceanTokenAddress: null,
-  oceanTokenSymbol: 'OCEAN',
-  factoryAddress: '0x1234',
+  oceanTokenSymbol: 'BDP',
+  factoryAddress: null,
   poolFactoryAddress: null,
   fixedRateExchangeAddress: null,
   dispenserAddress: null,
@@ -196,7 +196,7 @@ export class ConfigHelper {
         const data = JSON.parse(
           fs.readFileSync(
             process.env.ADDRESS_FILE ||
-              `${homedir}/.ocean/ocean-contracts/artifacts/address.json`,
+              `${homedir}/.bdp/bdp-contracts/artifacts/address.json`,
             'utf8'
           )
         )
